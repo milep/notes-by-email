@@ -2,6 +2,8 @@
   Edit #{resource_name.to_s.humanize}
 = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => 'form-vertical' }) do |f|
   = f.error_notification
+  .control-group.string.optional
+    Authentication token: #{resource.authentication_token}
   = f.input :name, :autofocus => true
   = f.input :email, :required => true
   = f.input :password, :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :required => false
