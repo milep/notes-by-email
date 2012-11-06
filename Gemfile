@@ -45,3 +45,4 @@ gem "ruby_parser", ">= 2.3.1", :group => :development
 gem "bootstrap-sass", ">= 2.1.0.1"
 gem "devise", ">= 2.1.2"
 gem "simple_form", ">= 2.0.4"
+gem "quiet_assets", ">= 1.0.1", :group => :development
