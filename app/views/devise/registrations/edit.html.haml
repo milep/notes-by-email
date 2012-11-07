@@ -4,6 +4,13 @@
   = f.error_notification
   .control-group.string.optional
     Authentication token: #{resource.authentication_token}
+
+  .control-group.string.optional
+    - if resource.dropbox_session
+      Dropbox authorized
+    - else
+      = link_to "Authorize Dropbox", dropbox_authorize_path
+
   = f.input :name, :autofocus => true
   = f.input :email, :required => true
   = f.input :password, :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :required => false
