@@ -4,10 +4,14 @@
   = f.error_notification
   .control-group.string.optional
     Authentication token: #{resource.authentication_token}
+  .control-group.string.optional
+    %p
+      Send email to: #{resource.authentication_token}@milep.mailgun.org
+      to save a note to the ~/Dropbox/Apps/notes-by-email/notes.org file.
 
   .control-group.string.optional
     - if resource.dropbox_session
-      Dropbox authorized
+      Dropbox is authorized
     - else
       = link_to "Authorize Dropbox", dropbox_authorize_path
 
