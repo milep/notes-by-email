@@ -5,7 +5,7 @@ class NotesController < ApplicationController
 
   def create
     contents = ""
-    dropbox_session = DropboxSession.deserialze(current_user.dropbox_session)
+    dropbox_session = DropboxSession.deserialize(current_user.dropbox_session)
     client = DropboxClient.new(dropbox_session, :app_folder)
 
     begin
