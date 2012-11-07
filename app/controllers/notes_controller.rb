@@ -13,8 +13,8 @@ class NotesController < ApplicationController
       parent_rev = metadata["rev"]
     rescue DropboxError => de
     end
-    contents.prepend "#{params["body-plain"]}\n\n"
-    contents.prepend "* #{params["subject"]}\n"
+    contents.insert(0, "#{params["body-plain"]}\n\n")
+    contents.insert(0, "* #{params["subject"]}\n")
 
     client.put_file('/notes.org', contents, true, parent_rev)
 
