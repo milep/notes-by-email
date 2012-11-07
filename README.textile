@@ -30,15 +30,18 @@ h2. Getting Started
 Standard rails app. You need to set following environment variables
 before running:
 
-pre.
-export DROPBOX_APP_KEY=<your key>
-export DROPBOX_APP_SECRET=<your secret>
+<pre>
+  export DROPBOX_APP_KEY=<your key>
+  export DROPBOX_APP_SECRET=<your secret>
+</pre>
 
 I have a following filter and action in the mailgun:
 
-pre.
-match_recipient("(.*)@milep.mailgun.org")
-forward("http://notes-by-email.herokuapp.com/notes/create/\1")
+<pre>
+  match_recipient("(.*)@milep.mailgun.org")
+  forward("http://notes-by-email.herokuapp.com/notes/create/\1")
+</pre>
+
 
 h2. Documentation and Support
 
