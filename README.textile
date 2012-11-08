@@ -1,5 +1,10 @@
 h1. Notes By Email
 
+I use Emacs org files to store my bookmarks and notes. This project allows me to
+send them by email(from iPhone) to
+~/Dropbox/Apps/notes-by-email/notes.org file, from where I can then
+copypaste them to appropriate org files.
+
 
 h2. Ruby on Rails
 
